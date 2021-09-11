@@ -14,7 +14,7 @@ class SignatureServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('*', function ($view) {
-            return $view->with('atmStyles','https://atm-code/css/atm-sign.css');
+            return $view->with('atmStyles','https://atm-code.com/css/atm-sign.css');
         });
 
         Blade::directive('zeus', function ($part = null) {
