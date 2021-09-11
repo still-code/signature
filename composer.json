@@ -1,0 +1,45 @@
+{
+    "name": "lara-zeus/signature",
+    "description": "laravel packages to add @atm-code and @zeus to the footer where it's needed in amm our projects",
+    "keywords": [
+        "laravel",
+        "lara-zeus",
+        "atm-code"
+    ],
+    "homepage": "https://github.com/atm-code",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ashraf Monshi",
+            "email": "wh7r.com@gmail.com",
+            "role": "Owner"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.17",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AtmCode\\Signature\\": "src"
+        }
+    },
+    "scripts": {},
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AtmCode\\Signature\\SignatureServiceProvider"
+            ],
+            "aliases": {
+                "Signature": "AtmCode\\Signature\\SignatureFacade"
+            }
+        }
+    }
+}
