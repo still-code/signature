@@ -1,5 +1,5 @@
 {
-    "name": "lara-zeus/signature",
+    "name": "atm-code/signature",
     "description": "laravel packages to add @atm-code and @zeus to the footer where it's needed in amm our projects",
     "keywords": [
         "laravel",
