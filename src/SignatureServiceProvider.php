@@ -18,7 +18,7 @@ class SignatureServiceProvider extends ServiceProvider
         View::composer('*', function ($view) {
             return $view->with('atmStyles','https://atm-code.com/css/atm-sign.css');
         });
-        
+
         Blade::directive('atmCode', function () {
             return '<link rel="stylesheet" href="{{ $atmStyles }}"><span class="font-courier"><span class="rounded-lg bg-gray-200 italic px-2 dark:bg-gray-600"><span class="not-italic">ATM ~ </span><span class="not-italic text-purple-500">&lt;?</span><span> code</span><span class="blink-cursor not-italic font-thin text-gray-400">|</span><span class="not-italic text-purple-500">?&gt;</span></span></span>';
         });
