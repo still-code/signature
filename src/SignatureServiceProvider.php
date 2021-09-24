@@ -2,9 +2,7 @@
 
 namespace AtmCode\Signature;
 
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class SignatureServiceProvider extends ServiceProvider
@@ -13,7 +11,7 @@ class SignatureServiceProvider extends ServiceProvider
     {
         // I know! 🤷🏽‍, please let me have my fun!!!
         Blade::directive('atmCode', function () {
-            return '<link rel="stylesheet" href="https://atm-code.com/css/atm-sign.css"><span class="atm-font-courier"><span class="atm-font-courier atm-rounded-lg atm-bg-gray-200 atm-italic px-2 dark:atm-bg-gray-600"><span class="atm-font-courier atm-not-italic">ATM ~ </span><span class="atm-font-courier atm-not-italic atm-text-purple-500">&lt;?</span><span> code</span><span class="atm-font-courier atm-blink-cursor atm-not-italic atm-font-thin atm-text-gray-400">|</span><span class="atm-font-courier atm-not-italic atm-text-purple-500">?&gt;</span></span></span>';
+            return '<link rel="stylesheet" href="https://atm-code.com/css/atm-sign.css"><span class="atm-font-courier"><span class="atm-font-courier atm-rounded-lg atm-bg-gray-200 atm-italic px-2 dark:atm-bg-gray-600"><span class="atm-font-courier atm-not-italic">ATM ~ </span><span class="atm-font-courier atm-not-italic atm-text-purple-500">&lt;?</span><span> code</span><span class="atm-font-courier blink-cursor atm-not-italic atm-font-thin atm-text-gray-400">|</span><span class="atm-font-courier atm-not-italic atm-text-purple-500">?&gt;</span></span></span>';
         });
 
         Blade::directive('zeus', function ($part = null) {
@@ -22,11 +20,9 @@ class SignatureServiceProvider extends ServiceProvider
         });
 
         Blade::directive('atmStats', function ($code) {
-            Artisan::call('view:clear');
-            if (!app()->isLocal() && optional(auth()->user())->email !== 'wh7r.com@gmail.com') {
+            if (!app()->isLocal() && !(new \Jenssegers\Agent\Agent())->isRobot() && optional(auth()->user())->email !== 'wh7r.com@gmail.com') {
                 return '<script async defer data-website-id="'.$code.'" src="https://stats.atm-code.com/umami.js"></script>';
             }
-
             return '';
         });
     }
