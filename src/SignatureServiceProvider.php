@@ -22,10 +22,10 @@ class SignatureServiceProvider extends ServiceProvider
         Blade::directive('atmStats', function ($code) {
             $jsTag = '<script async defer data-website-id="'.$code.'" data-do-not-track="true" data-cache="true" src="https://stats.atm-code.com/umami.js"></script>';
             if (!app()->isLocal() && !(new \Jenssegers\Agent\Agent())->isRobot()) {
-                if (!auth()->check) {
+                if (!auth()->check()) {
                     return $jsTag;
                 }
-                if (auth()->check && auth()->user()->email !== 'wh7r.com@gmail.com') {
+                if (auth()->check() && auth()->user()->email !== 'wh7r.com@gmail.com') {
                     return $jsTag;
                 }
                 return $jsTag;
