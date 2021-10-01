@@ -38,7 +38,5 @@ class SignatureServiceProvider extends ServiceProvider
         $this->app->singleton('signature', function () {
             return new signature;
         });
-
-
     }
 }
