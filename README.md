@@ -1,4 +1,4 @@
-# a signature for all atm-code's projects
+# for common codes for all my projects
 
 this is just for fun to add @atm-code and @zeus to the footer where it's needed in amm our projects
 
