@@ -9,7 +9,7 @@ class SignatureServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        // I know! 🤷🏽‍, please let me have my fun!!! ..
+        // I know! 🤷🏽‍, please let me have my fun!!!
         Blade::directive('atmCode', function () {
             return '<link rel="stylesheet" href="https://atm-code.com/css/atm-sign.css"><span class="atm-font-courier"><span class="atm-font-courier atm-rounded-lg atm-bg-gray-200 atm-italic px-2 dark:atm-bg-gray-600"><span class="atm-font-courier atm-not-italic">ATM ~ </span><span class="atm-font-courier atm-not-italic atm-text-purple-500">&lt;?</span><span> code</span><span class="atm-font-courier blink-cursor atm-not-italic atm-font-thin atm-text-gray-400">|</span><span class="atm-font-courier atm-not-italic atm-text-purple-500">?&gt;</span></span></span>';
         });
