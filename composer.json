@@ -21,15 +21,14 @@
         "jenssegers/agent": "^2.6"
     },
     "require-dev": {
-        "orchestra/testbench": "^6.17",
-        "phpunit/phpunit": "^9.0"
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
         "psr-4": {
             "AtmCode\\Signature\\": "src"
         }
     },
-    "scripts": {},
     "config": {
         "sort-packages": true
     },
@@ -37,10 +36,7 @@
         "laravel": {
             "providers": [
                 "AtmCode\\Signature\\SignatureServiceProvider"
-            ],
-            "aliases": {
-                "Signature": "AtmCode\\Signature\\SignatureFacade"
-            }
+            ]
         }
     }
 }

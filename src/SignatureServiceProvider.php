@@ -27,11 +27,4 @@ class SignatureServiceProvider extends ServiceProvider
             return '<!-- no tags for you -->';
         });
     }
-
-    public function register()
-    {
-        $this->app->singleton('signature', function () {
-            return new signature;
-        });
-    }
 }
