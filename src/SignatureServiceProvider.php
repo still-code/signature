@@ -15,7 +15,7 @@ class SignatureServiceProvider extends ServiceProvider
         });
 
         Blade::directive('zeus', function ($part = null) {
-            return '<span class="atm-font-koho atm-text-gray-700 atm-group"><span class="atm-font-koho atm-font-semibold atm-text-green-600 group-hover:atm-text-yellow-500 atm-transition atm-ease-in-out atm-duration-300">Lara&nbsp;<span class="atm-font-koho atm-line-through atm-italic atm-text-yellow-500 group-hover:atm-text-green-600 atm-transition atm-ease-in-out atm-duration-300">Z</span>eus</span></span>'
+            return '<link rel="stylesheet" href="https://atm-code.com/css/atm-sign.css"><span class="atm-font-koho atm-text-gray-700 atm-group"><span class="atm-font-koho atm-font-semibold atm-text-green-600 group-hover:atm-text-yellow-500 atm-transition atm-ease-in-out atm-duration-300">Lara&nbsp;<span class="atm-font-koho atm-line-through atm-italic atm-text-yellow-500 group-hover:atm-text-green-600 atm-transition atm-ease-in-out atm-duration-300">Z</span>eus</span></span>'
                 .($part) ?? '<span class="atm-font-koho atm-text-base atm-tracking-wide atm-text-gray-500">{$part}</span>';
         });
 
