@@ -1,12 +1,12 @@
 {
-    "name": "atm-code/signature",
-    "description": "laravel packages to add @atm-code and @zeus to the footer where it's needed in amm our projects",
+    "name": "still-code/signature",
+    "description": "laravel packages to add @still-code and @zeus to the footer where it's needed in amm our projects",
     "keywords": [
         "laravel",
         "lara-zeus",
-        "atm-code"
+        "still-code"
     ],
-    "homepage": "https://github.com/atm-code",
+    "homepage": "https://github.com/still-code",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AtmCode\\Signature\\": "src"
+            "StillCode\\Signature\\": "src"
         }
     },
     "config": {
@@ -35,7 +35,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AtmCode\\Signature\\SignatureServiceProvider"
+                "StillCode\\Signature\\SignatureServiceProvider"
             ]
         }
     }
