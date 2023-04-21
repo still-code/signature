@@ -20,9 +20,8 @@ class SignatureServiceProvider extends ServiceProvider
         });
 
         Blade::directive('stillStats', function ($code) {
-            $jsTag = '<!-- stats --><script async defer data-website-id="'.$code.'" src="https://stats.still-code.com/umami.js"></script>';
-            if (!app()->isLocal() && !(new \Jenssegers\Agent\Agent())->isRobot()) {
-                return $jsTag;
+            if (!app()->isLocal()) {
+                return '<!-- stats --><script async defer data-website-id="'.$code.'" src="https://stats.still-code.com/umami.js"></script>';
             }
 
             return '<!-- no tags for you -->';
