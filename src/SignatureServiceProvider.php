@@ -21,7 +21,7 @@ class SignatureServiceProvider extends ServiceProvider
 
         Blade::directive('stillStats', function ($code) {
             if (!app()->isLocal()) {
-                return '<!-- stats --><script async defer data-website-id="'.$code.'" src="https://stats.still-code.com/umami.js"></script>';
+                return '<!-- stats --><script async defer data-website-id="'.$code.'" src="https://stats.still-code.com/script.js"></script>';
             }
 
             return '<!-- no tags for you -->';
