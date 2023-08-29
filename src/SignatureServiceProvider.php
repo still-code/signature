@@ -15,8 +15,8 @@ class SignatureServiceProvider extends ServiceProvider
         });
 
         Blade::directive('zeus', function ($part = null) {
-            return '<link rel="stylesheet" href="https://still-code.com/css/still-sign.css"><span class="still-font-koho still-text-gray-700 still-group"><span class="still-font-koho still-font-semibold still-text-green-600 group-hover:still-text-yellow-500 still-transition still-ease-in-out still-duration-300">Lara&nbsp;<span class="still-font-koho still-line-through still-italic still-text-yellow-500 group-hover:still-text-green-600 still-transition still-ease-in-out still-duration-300">Z</span>eus</span></span>'
-                .($part) ?? '<span class="still-font-koho still-text-base still-tracking-wide still-text-gray-500">{$part}</span>';
+            return '<link rel="stylesheet" href="https://still-code.com/css/still-sign.css"><span class="still-font-koho still-group"><span class="still-font-koho still-font-semibold still-text-zprimary-500 group-hover:still-text-zsecondary-500 still-transition still-ease-in-out still-duration-300">Lara&nbsp;<span class="still-font-koho still-line-through still-italic still-text-zsecondary-500 group-hover:still-text-zprimary-500 still-transition still-ease-in-out still-duration-300">Z</span>eus</span></span>'
+            .($part) ?? '<span class="still-font-koho still-text-base still-tracking-wide still-text-gray-500">{$part}</span>';
         });
 
         Blade::directive('stillStats', function ($code) {
